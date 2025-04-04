@@ -4,8 +4,8 @@
 
 // --- Constants ---
 const minimumViewingTime = 30000; // 30 seconds in milliseconds
-const surveyBaseUrl = 'YOUR_POST_SURVEY_LINK_HERE'; // !! IMPORTANT: Replace with your Qualtrics Post-Survey URL !!
-const googleAppsScriptUrl = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL'; // !! IMPORTANT: Replace with your deployed GAS Web App URL !!
+const surveyBaseUrl = 'https://qualtricsxm8lxkfg4x2.qualtrics.com/jfe/form/SV_8uYDRNeIueQwyVw'; // !! IMPORTANT: Replace with your Qualtrics Post-Survey URL !!
+const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbwx9o_U4b6H53rjOxj5zIUZqPUeDgFSjf7IbqZ6YVYkOdMPeLDojLpJo5MToZ5ivRB-/exec'; // !! IMPORTANT: Replace with your deployed GAS Web App URL !!
 
 // --- Global Variables ---
 let scarcityTimerInterval = null;
@@ -16,121 +16,6 @@ let participantId = 'missing_pid';
 let assignedPlatform = 'desktop';
 let assignedCondition = 'control';
 
-/*
-===============================================================================
-== INSTRUCTIONS FOR GOOGLE APPS SCRIPT (GAS) DATA LOGGING SETUP             ==
-===============================================================================
-
-To record the experimental data, you need to set up a simple Google Apps Script
-connected to a Google Sheet. Follow these steps:
-
-1.  CREATE A GOOGLE SHEET:
-    - Go to sheets.google.com and create a new blank spreadsheet.
-    - Name it something descriptive (e.g., "Scarcity Experiment Data").
-    - Add header row(s) in the first row corresponding to the data you expect
-      to log. The order matters for the script below. A good order is:
-      `timestamp`, `pid`, `platform`, `condition`, `action`, `cartClicked`
-      (Note: `cartClicked` might be null/undefined for some actions like pageLoad).
-
-2.  OPEN THE SCRIPT EDITOR:
-    - In your Google Sheet, go to "Tools" > "Script editor".
-    - A new browser tab will open with the script editor. Delete any existing
-      code (like `function myFunction() {}`).
-
-3.  WRITE THE `doPost(e)` FUNCTION:
-    - Copy and paste the following script code into the editor:
-
-    ```javascript
-    // Google Apps Script Code for doPost(e)
-    function doPost(e) {
-      // Check if postData exists and has content
-      if (!e || !e.postData || !e.postData.contents) {
-        // Return an error response if data is missing
-        return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: 'No data received' })).setMimeType(ContentService.MimeType.JSON);
-      }
-
-      // --- Configuration ---
-      var sheetName = 'Sheet1'; // Or the exact name of your sheet tab
-      // --- End Configuration ---
-
-      try {
-        var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
-        if (!sheet) {
-          throw new Error("Sheet '" + sheetName + "' not found.");
-        }
-
-        // Parse the JSON data sent from the website script
-        var data = JSON.parse(e.postData.contents);
-
-        // Define the order of columns based on your sheet headers
-        // Ensure this matches the headers you set up in Step 1!
-        var rowData = [
-          data.timestamp || new Date().toISOString(), // Use received timestamp or current time as fallback
-          data.pid || '',
-          data.platform || '',
-          data.condition || '',
-          data.action || '',
-          data.cartClicked // This might be undefined/null for some actions, which is fine
-          // Add any other data fields you might send here, in order
-        ];
-
-        // Append the data as a new row in the sheet
-        sheet.appendRow(rowData);
-
-        // Return a success response (optional, but good practice)
-        // Note: 'no-cors' mode in fetch won't read this response, but it confirms script ran
-        return ContentService.createTextOutput(JSON.stringify({ status: 'success', received: data })).setMimeType(ContentService.MimeType.JSON);
-
-      } catch (error) {
-        // Log the error (visible in Apps Script > Executions)
-        Logger.log('Error processing request: ' + error.toString());
-        Logger.log('Received data: ' + e.postData.contents);
-
-        // Return an error response
-        return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.toString(), received: e.postData.contents })).setMimeType(ContentService.MimeType.JSON);
-      }
-    }
-    ```
-
-4.  SAVE THE SCRIPT:
-    - Click the floppy disk icon (Save project). Give your script project a name
-      (e.g., "Experiment Logger").
-
-5.  DEPLOY AS A WEB APP:
-    - Click the "Deploy" button (usually top right).
-    - Select "New deployment".
-    - Click the gear icon next to "Select type" and choose "Web app".
-    - Configure the deployment:
-        - Description: (Optional) e.g., "Scarcity study data logger v1"
-        - Execute as: "Me" (Your Google Account)
-        - Who has access: **"Anyone"** (This is crucial for your website to send data without login)
-    - Click "Deploy".
-
-6.  AUTHORIZE THE SCRIPT:
-    - Google will ask for authorization to access your spreadsheet. Review the
-      permissions (it will need to manage your spreadsheets) and click "Allow".
-      You might see a "Google hasn't verified this app" screen. If so, click
-      "Advanced" and then "Go to [Your Script Name] (unsafe)". This is normal
-      for personal scripts.
-
-7.  COPY THE WEB APP URL:
-    - After deployment, a box will appear showing the "Web app URL".
-    - **Copy this entire URL.** This is the endpoint your website needs to send data to.
-    - Click "Done".
-
-8.  UPDATE `script.js`:
-    - Paste the copied Web App URL into the `googleAppsScriptUrl` constant at the
-      top of *this* `script.js` file, replacing the placeholder text.
-
-9.  (Optional) REDEPLOYING:
-    - If you make changes to the Apps Script code later, you MUST redeploy.
-    - Click "Deploy" > "Manage deployments".
-    - Select your active deployment, click the pencil (Edit) icon.
-    - Change "Version" to "New version".
-    - Click "Deploy". You do NOT need to copy the URL again unless you created
-      a completely new deployment.
-
-*/
 
 
 // --- Utility Functions ---
@@ -148,7 +33,7 @@ function getUrlParameter(name) {
  * @param {object} dataObject The data to log (must be JSON serializable).
  */
 function logData(dataObject) {
-    if (!googleAppsScriptUrl || googleAppsScriptUrl === 'https://script.google.com/macros/s/AKfycbwx9o_U4b6H53rjOxj5zIUZqPUeDgFSjf7IbqZ6YVYkOdMPeLDojLpJo5MToZ5ivRB-/exec') {
+    if (!googleAppsScriptUrl || googleAppsScriptUrl === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
         console.warn("logData: Google Apps Script URL is not configured. Logging to console only.");
         console.log("Logging Data (Simulated):", dataObject);
         return; // Don't attempt fetch if URL is missing
@@ -341,7 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
             timestamp: new Date().toISOString()
         });
 
-        if (!surveyBaseUrl || surveyBaseUrl === 'https://qualtricsxm8lxkfg4x2.qualtrics.com/jfe/form/SV_8uYDRNeIueQwyVw') {
+        if (!surveyBaseUrl || surveyBaseUrl === 'YOUR_QUALTRICS_POST_SURVEY_ANONYMOUS_LINK_HERE') {
              console.error("Post Survey URL is not configured! Cannot redirect.");
              alert("Error: Survey URL is missing. Cannot proceed."); // User feedback
              return;
