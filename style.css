@@ -1,0 +1,239 @@
+/* --- Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Or a preferred font stack */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px; /* Add padding for smaller screens */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #111;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents extra space below image */
+}
+
+button {
+    font-family: inherit; /* Inherit body font */
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border: none;
+    text-align: center;
+}
+
+/* --- Product Container --- */
+.product-container {
+    max-width: 600px; /* Max width for mobile/default */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Center align text elements by default */
+}
+
+/* --- Logo & Product Image --- */
+#logo-placeholder {
+    margin-bottom: 20px;
+}
+
+#logo-placeholder img {
+    max-width: 150px; /* Limit logo size */
+    margin: 0 auto; /* Center logo */
+}
+
+#product-image {
+    margin-bottom: 20px;
+}
+
+#product-image img {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 0 auto; /* Center product image */
+}
+
+/* --- Text Content --- */
+#product-title {
+    margin-bottom: 10px;
+}
+
+.reviews-snippet {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.reviews-snippet span {
+    margin: 0 5px;
+}
+
+#product-description {
+    margin-bottom: 20px;
+    text-align: left; /* Left align longer description */
+    color: #444;
+}
+
+#product-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #008000; /* Green color for price */
+    margin-bottom: 15px;
+}
+
+/* --- Scarcity Message --- */
+#scarcity-message {
+    margin: 15px 0;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    /* Default empty - JS will add content and potentially classes for styling */
+    /* Example styles if it contains text: */
+    /* background-color: #fff3cd; */
+    /* border: 1px solid #ffeeba; */
+    /* color: #856404; */
+}
+
+/* Add specific classes for different scarcity types if needed */
+#scarcity-message.time-limited {
+    background-color: #f8d7da; /* Light red */
+    border: 1px solid #f5c6cb;
+    color: #721c24; /* Dark red */
+}
+
+#scarcity-message.quantity-limited {
+    background-color: #fff3cd; /* Light yellow */
+    border: 1px solid #ffeeba;
+    color: #856404; /* Dark yellow/brown */
+}
+
+
+/* --- Info Snippets & Payment Icons --- */
+.info-snippet {
+    font-size: 0.9em;
+    color: #666;
+    text-align: left; /* Left align info snippets */
+    padding-left: 10px; /* Indent slightly */
+    margin-bottom: 8px;
+    /* Add background icons using ::before if desired */
+}
+
+/* Placeholder for icon styling if using font icons or background images */
+.info-snippet /* ::before */ {
+    /* content: '[ICON]'; */
+    /* margin-right: 5px; */
+}
+
+.payment-icons {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.payment-icons span {
+    margin: 0 8px;
+    /* Replace spans with <img> or icon elements as needed */
+}
+
+/* --- Buttons --- */
+#add-to-cart-button,
+#continue-button {
+    display: block; /* Full width buttons on mobile */
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Add to Cart Button Specifics */
+#add-to-cart-button {
+    background-color: #28a745; /* Green */
+    color: #fff;
+}
+
+#add-to-cart-button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+#add-to-cart-button:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Continue Button Specifics */
+#continue-button {
+    display: none; /* HIDDEN BY DEFAULT */
+    background-color: #007bff; /* Blue */
+    color: #fff;
+}
+
+#continue-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+#continue-button:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Desktop Adjustments --- */
+@media (min-width: 768px) {
+    .product-container {
+        max-width: 800px; /* Wider container on desktop */
+        padding: 30px;
+    }
+
+    /* Optional: Make buttons less wide on desktop */
+    #add-to-cart-button,
+    #continue-button {
+        display: inline-block; /* Allow side-by-side if needed */
+        width: auto; /* Auto width based on content */
+        min-width: 180px; /* Ensure a minimum size */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #product-description {
+        font-size: 1.05em; /* Slightly larger text */
+    }
+
+     .info-snippet {
+        padding-left: 20px; /* More indent on desktop */
+    }
+
+    /* Potential for more complex layouts like side-by-side image/text using Flexbox/Grid here */
+    /* Example (needs HTML structure adjustment):
+    .product-main-flex {
+        display: flex;
+        gap: 20px;
+        text-align: left;
+    }
+    .product-main-flex #product-image { flex: 1; }
+    .product-main-flex .product-details { flex: 2; }
+    */
+}
