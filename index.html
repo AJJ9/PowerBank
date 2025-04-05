@@ -3,62 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Bank Offer</title>
+    <meta name="description" content="ChargeMax 10000mAh Power Bank - Stay charged on the go with advanced lithium-polymer battery technology">
+    <title>ChargeMax Power Bank - Premium 10000mAh Portable Charger</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
     <div class="product-container">
-
-        <div id="logo-placeholder">
-            <img src="placeholder_logo.png" alt="Company Logo">
+        <div class="header-container">
+            <header>
+                <div id="logo-placeholder">
+                    <img src="ChangeMaxLogo.png" alt="ChargeMax Logo" width="150" height="60">
+                </div>
+            </header>
         </div>
 
-        <div id="product-image">
-            <img src="your_powerbank_image.jpg" alt="Power Bank Image">
-        </div>
+        <main>
+            <div class="product-layout">
+                <section class="product-gallery" aria-label="Product gallery">
+                    <div id="product-image-gallery">
+                        <div class="gallery-container">
+                            <div class="image-loader"></div>
+                            <img src="ChargeMax1.png" alt="ChargeMax 10000mAh Power Bank - Front View" class="gallery-image active" loading="eager" fetchpriority="high">
+                            <img src="ChargeMax2.png" alt="ChargeMax Internal Components Diagram" class="gallery-image" loading="lazy">
+                            <img src="ChargeMax3.png" alt="ChargeMax Power Bank Side View" class="gallery-image" loading="lazy">
+                        </div>
+                        <div class="gallery-controls" role="tablist" aria-label="Gallery navigation">
+                            <button class="gallery-dot active" data-index="0" role="tab" aria-selected="true" aria-label="View image 1"></button>
+                            <button class="gallery-dot" data-index="1" role="tab" aria-selected="false" aria-label="View image 2"></button>
+                            <button class="gallery-dot" data-index="2" role="tab" aria-selected="false" aria-label="View image 3"></button>
+                        </div>
+                    </div>
+                </section>
 
-        <h1 id="product-title">ChargeMax 10000mAh Power Bank</h1>
+                <section class="product-details">
+                    <div class="badge-container">
+                        <span class="badge bestseller" role="text">Best Seller</span>
+                        <span class="badge new" role="text">New</span>
+                    </div>
+                    
+                    <h1 id="product-title">ChargeMax 10000mAh Power Bank</h1>
 
-        <div class="reviews-snippet">
-            <!-- Example Review Snippet Content -->
-            <span>★★★★☆ (4.5/5 stars)</span> | <span>1,234 Reviews</span>
-            <!-- You can replace this with more detailed snippet elements if needed -->
-        </div>
+                    <div class="reviews-snippet" aria-label="Product rating: 4.5 out of 5 stars based on 1,234 reviews">
+                        <div class="stars" aria-hidden="true">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star half">★</span>
+                        </div>
+                        <span class="rating-text">4.5</span>
+                        <span class="review-count">(1,234 Reviews)</span>
+                    </div>
 
-        <p id="product-description">
-            Stay charged on the go with the reliable ChargeMax 10000mAh Power Bank. Features dual USB ports for simultaneous charging, fast-charge technology, and a sleek, portable design. Compatible with most smartphones, tablets, and USB-powered devices. Never run out of battery again!
-        </p>
+                    <div class="pricing-block">
+                        <p id="product-price">$29.99</p>
+                    </div>
 
-        <p id="product-price">$29.99</p>
+                    <div id="scarcity-message" aria-live="polite" role="status"></div>
 
-        <!-- Scarcity message will be injected here by JavaScript -->
-        <div id="scarcity-message"></div>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-text">10000mAh Capacity</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feature-text">Fast Charging</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-text">Multiple Ports</div>
+                        </div>
+                    </div>
 
-        <p class="info-snippet">
-            [ICON Shipping Truck] Fast & Free Shipping on orders over $25!
-        </p>
+                    <p id="product-description">
+                        Stay charged on the go with our premium ChargeMax 10000mAh Power Bank. Featuring advanced lithium-polymer battery technology, this compact powerhouse delivers reliable charging for your devices whenever and wherever you need it. The dual USB ports support simultaneous charging of two devices, while the integrated smart chip technology automatically detects and delivers the optimal charging speed for each connected device.
+                    </p>
 
-        <p class="info-snippet">
-            [ICON Return Arrows] Easy 30-Day Returns Guarantee.
-        </p>
+                    <!-- Expandable Product Details Sections -->                     
+                    <div class="product-accordion">
+                        <div class="accordion-item" id="specifications-section">
+                            <div class="accordion-header">
+                                <span>Specifications</span>
+                                <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="accordion-content">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td>Capacity</td>
+                                        <td>10000mAh / 37Wh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Input</td>
+                                        <td>Micro USB: 5V/2A<br>USB-C: 5V/2.4A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output</td>
+                                        <td>USB-A (1): 5V/2.4A<br>USB-A (2): 5V/2.1A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dimensions</td>
+                                        <td>3.6 × 2.3 × 0.9 inches (92 × 59 × 22 mm)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight</td>
+                                        <td>6.7 oz (190g)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Battery Type</td>
+                                        <td>Lithium Polymer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charging Time</td>
+                                        <td>~5 hours (with 2A charger)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protection</td>
+                                        <td>Short-circuit, over-charge, over-discharge</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" id="features-section">
+                            <div class="accordion-header">
+                                <span>Key Features</span>
+                                <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="accordion-content">
+                                <ul class="feature-details">
+                                    <li><strong>Smart Charging Technology</strong> - Automatically detects connected devices to provide optimal charging current</li>
+                                    <li><strong>Dual USB Outputs</strong> - Charge two devices simultaneously at high speed</li>
+                                    <li><strong>LED Power Indicator</strong> - 4-level LED display shows remaining battery level at a glance</li>
+                                    <li><strong>Compact Design</strong> - Slim profile fits easily in pockets, bags, and purses</li>
+                                    <li><strong>Safety Protection</strong> - Built-in safeguards protect your devices against excessive current, overheating, and overcharging</li>
+                                    <li><strong>Low Current Mode</strong> - Special charging mode for low-power devices like wireless earbuds and smartwatches</li>
+                                    <li><strong>Premium Materials</strong> - Durable outer shell with soft-touch finish resists scratches and fingerprints</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" id="compatibility-section">
+                            <div class="accordion-header">
+                                <span>Compatibility</span>
+                                <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="accordion-content">
+                                <p>The ChargeMax 10000mAh is compatible with virtually all USB-powered devices, including:</p>
+                                <div class="compatibility-grid">
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                                <line x1="12" y1="18" x2="12" y2="18"></line>
+                                            </svg>
+                                        </div>
+                                        <div>Smartphones</div>
+                                    </div>
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                            </svg>
+                                        </div>
+                                        <div>Tablets</div>
+                                    </div>
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                            </svg>
+                                        </div>
+                                        <div>Bluetooth Speakers</div>
+                                    </div>
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                                <polyline points="14 2 14 8 20 8"></polyline>
+                                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                <polyline points="10 9 9 9 8 9"></polyline>
+                                            </svg>
+                                        </div>
+                                        <div>E-readers</div>
+                                    </div>
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <circle cx="12" cy="12" r="7"></circle>
+                                                <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                                                <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path>
+                                            </svg>
+                                        </div>
+                                        <div>Smartwatches</div>
+                                    </div>
+                                    <div class="compatibility-item">
+                                        <div class="compatibility-icon">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                <path d="M17 18a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2"></path>
+                                                <rect x="3" y="4" width="18" height="12" rx="2" ry="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div>Laptops (emergency)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <button id="add-to-cart-button">Add to Cart</button>
+                    <div class="info-snippets">
+                        <div class="info-snippet shipping">
+                            <span class="info-title">Fast & Free Shipping</span>
+                            <span class="info-detail">Orders over $25 ship free</span>
+                        </div>
 
-        <!-- This button is hidden initially and shown after the timer/action -->
-        <button id="continue-button" style="display: none;">Continue to Survey</button>
+                        <div class="info-snippet returns">
+                            <span class="info-title">Easy 30-Day Returns</span>
+                            <span class="info-detail">Hassle-free guarantee</span>
+                        </div>
+                    </div>
 
-        <div class="payment-icons">
-            <!-- Example Payment Icons Placeholders -->
-            <span>[Visa Logo]</span>
-            <span>[Mastercard Logo]</span>
-            <span>[PayPal Logo]</span>
-            <span>[Amex Logo]</span>
-            <!-- Replace with actual <img> tags or icon fonts -->
-        </div>
+                    <div class="action-buttons">
+                        <button id="add-to-cart-button" aria-label="Add to Cart" aria-haspopup="dialog">
+                            <span class="btn-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </span>
+                            <span>Add to Cart</span>
+                        </button>
+                        <button id="continue-button" style="display: none;" aria-label="Continue to survey">Continue to Survey</button>
+                    </div>
+                    
+                    <!-- FAQ Section - Moved here to be below the "Add to Cart" button -->
+                    <div class="faq-section" aria-labelledby="faq-heading">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How many times can it charge my phone?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The ChargeMax 10000mAh can typically charge most modern smartphones 2-3 times depending on your device's battery capacity. For example, it can charge an iPhone 14 approximately 2.5 times and a Samsung Galaxy S22 about 2 times.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Is it airline approved?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! The ChargeMax 10000mAh is below the 100Wh limit set by TSA and most international airlines, making it safe for air travel in your carry-on luggage. Its 37Wh capacity is well within safety regulations.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Does it come charged?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>ChargeMax power banks typically come with a 30-50% partial charge out of the box. We recommend fully charging your power bank before first use to maximize battery life and performance.</p>
+                            </div>
+                        </div>
+                    </div>
 
-    </div> <!-- End of .product-container -->
+                    <div class="payment-icons">
+                        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-visa"><title id="pi-visa">Visa</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"/></svg>
+                        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><circle fill="#EB001B" cx="15" cy="12" r="7"/><circle fill="#F79E1B" cx="23" cy="12" r="7"/><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.3 3-3.4 3-5.7z"/></svg>
+                        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg>
+                        <svg class="payment-icon" viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-amex"><title id="pi-amex">American Express</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#006FCF" d="M3 4.4v15.1h1V8.3h.1l5.3 11.2h1.4l5.3-11.2h.1v11.2h1V4.4h-1.7l-5.2 11.2h-.1L5 4.4H3zm13.5 0v15.1h6.6v-.9h-5.6v-6h5.2v-.9h-5.2v-6.4h5.6v-.9h-6.6zm8.5 0c-.5 0-.8.4-.8.8V20.4c0 .5.3.8.8.8h5c.5 0 .8-.4.8-.8v-2.9c0-.5-.3-.8-.8-.8h-4v-1.4h4c.5 0 .8-.4.8-.8v-2.8c0-.5-.3-.8-.8-.8h-4v-1.4h4c.5 0 .8-.4.8-.8V5.2c0-.5-.3-.8-.8-.8H25z"/></svg>
+                    </div>
 
-    <script src="script.js"></script>
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                            <span>24-Month Warranty</span>
+                        </div>
+                        <div class="trust-badge">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                            <span>Verified Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
